@@ -1,0 +1,38 @@
+{% extends "master.html" %} <!-- Extends the master.html template -->
+
+{% load static %} <!-- Loads static files -->
+
+{% block title %}
+My Recipe Book <!-- Title of the page -->
+{% endblock %}
+
+
+{% block content %}
+{% include 'navigation.html' %}
+<head>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'main.css' %}"> 
+</head>
+
+<header id = "main_header" class="recipe-banner image-as-background" style="background-image: url('/static/images/pic5.jpg');">
+    <div class="recipe-container">
+        <p>Discover new fun recipes</p> <!-- Text content -->
+        <h1 class="recipe-title animate fadeInLeft delay-600">Recipe Repository</h1> <!-- Main title -->
+    </div>
+</header>
+{% include 'description.html' %}
+
+{% include 'latest_recipes.html' %}
+
+
+
+<script src="{% static 'main.js' %}"></script>
+<script>
+    // Add event listener for scroll
+    window.addEventListener('scroll', function() {
+        fadeOutOnScroll(document.getElementById('main_header'));
+    });
+    </script>
+{% endblock %}

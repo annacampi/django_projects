@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    /* Removes default margin */
+    padding: 0;
+}
+
+    /* Styles for the recipe banner */
+    .recipe-banner {
+        /* Sets background position */
+        background-position: 50% 50%;
+        /* Disables background repeat */
+        background-repeat: no-repeat;
+        /* Scales the background image to cover the entire element */
+        background-size: cover;
+        /* 100% height of the viewport */
+        height: 100vh;
+        /* Hides overflow content */
+        overflow: hidden;
+        /* Sets position relative */
+        position: relative;
+        /* Sets width to 100% */
+        width: 100%;
+    }
+
+    .recipe-container {
+        /* Includes padding and border in the element's total width and height */
+        box-sizing: border-box;
+        /* Sets height to auto */
+        height: auto;
+        /* Sets padding */
+        padding: 30px 50px;
+        /* Sets position relative */
+        position: relative;
+        /* Sets z-index */
+        z-index: 2;
+    }
+
+    .recipe-container p {
+        /* Sets text color */
+        color: white;
+        /* Sets font family */
+        font-family: 'Roboto Condensed', sans-serif;
+        /* Sets font size */
+        font-size: 13px;
+        /* Sets font weight */        
+        font-weight: bold;
+        /* Sets letter spacing */
+        letter-spacing: 6px;
+        /* Sets opacity */
+        opacity: 0.8;
+        /* Transforms text to uppercase */
+        text-transform: uppercase;
+        /* Aligns text to left */
+        text-align: left;
+    }
+
+    .recipe-title {
+        /* Sets text color */
+        color: white;
+        /* Sets font family */
+        font-family: 'Playfair Display', serif;
+        /* Sets font size based on viewport width */
+        font-size: 17vw;
+        /* Sets font weight */
+        font-weight: 500;
+        /* Sets letter spacing */
+        letter-spacing: 1px;
+        /* Sets line height */
+        line-height: 1.1;
+        /* Sets margin */
+        margin: 5px 0;
+        /* Aligns text to left */
+        text-align: left;
+        /* Sets width to 85% */
+        width: 85%;
+    }
+
+    @media screen and (min-width:640px) {
+        .recipe-title {
+            font-size: 10vw;
+            /* Sets font size based on viewport width for larger screens */
+        }
+    }

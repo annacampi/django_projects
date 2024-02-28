@@ -1,0 +1,9 @@
+/* navbar.css */
+.navbar {
+    background-color: #007bff; /* Bootstrap primary color */
+}
+
+.navbar a {
+    color: white; /* White text color for links */
+    margin-right: 10px; /* Add some space between links */
+}

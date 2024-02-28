@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Card</title>
+  <link rel="stylesheet" href="{% static 'recipe_card.css' %}">
+
+  </style>
+</head>
+<body>
+
+    <div class="container mt-6">
+        <div class="row">
+            {% for recipe in latest_recipes %}
+            <div class="col-md-4"> <!-- Adjust the column size to center the card -->
+                <div class="card">
+                    <img class="card-img-top" src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+                    <div class="card-body" style="background-color: #FAF5F0">
+                        <h5 class="card-title">{{ recipe.title }}</h5>
+                        <p class="card-text">{{ recipe.description }}</p>
+                        <a href="{% url 'details' recipe.id %}" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

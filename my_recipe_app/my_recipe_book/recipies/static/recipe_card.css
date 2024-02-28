@@ -1,0 +1,67 @@
+.card {
+    width: 23rem; /* Adjust width as needed */
+    height: 100%; /* Let the height adjust based on content */
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .card-img-top {
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+
+  .card-title {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .recipe-container {
+      padding-top: 100px; /* Adjust as needed to separate from the header */
+    }
+  }
+
+  .container {
+    margin-top: 50px;
+  }
+
+
+  .btn {
+    
+    color: white;
+    margin-top: auto;
+
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+   
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+  
+  display: inline-block;
+  cursor: pointer;
+   }
+
+
+   .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-md-4 {
+    flex: 0 0 33.33%; /* Adjust column size */
+    max-width: 33.33%; /* Ensure each column takes up equal space */
+    padding: 15px; /* Add padding to space out cards */
+  }
+
+  .card-body {
+    flex-grow: 1; /* Allow the card body to grow and fill remaining space */
+    display: flex;
+    flex-direction: column;
+  }

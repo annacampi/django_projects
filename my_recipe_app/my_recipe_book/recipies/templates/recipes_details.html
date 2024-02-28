@@ -1,0 +1,15 @@
+
+{% extends "master.html" %}
+
+{% block title %}
+Details about {{ my_recipe.title }} {{ my_recipe.description }}
+{% endblock %}
+
+{% block content %}
+<h1>{{ my_recipe.title }} {{ my_recipe.description }}</h1>
+  
+<p>Ingredients: {{ my_recipe.ingredients }}</p>
+<p>Instructions: {{ my_recipe.instructions }}</p>
+
+<p>Back to <a href="/recipies">Recipes</a></p>
+{% endblock %}

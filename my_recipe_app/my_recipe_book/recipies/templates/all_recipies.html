@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My Recipe Book - List of all recipes
+{% endblock %}
+
+{% block content %}
+{% include 'navigation.html' %}
+<p><a href="/">HOME</a></p>
+  <h1>Recipes</h1>
+  
+  <ul>
+    {% for recipe in my_recipes %}
+    <li><a href="{% url 'details' id=recipe.id %}">{{ recipe.title }} {{ recipe.description }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
